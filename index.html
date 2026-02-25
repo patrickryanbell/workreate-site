@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Workreate</title>
+  <meta name="description" content="Workreate inspires people to use their God-given gifts to create value through decentralized work, power, and money." />
+
+  <style>
+    :root {
+      --bg: #f9f9f7;
+      --text: #1f2933;
+      --muted: #6b7280;
+      --accent: #2f855a;
+      --accent-soft: #e6f4ee;
+      --max-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 6rem 0 5rem;
+      background: linear-gradient(
+        to bottom,
+        var(--accent-soft),
+        var(--bg)
+      );
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      max-width: 800px;
+    }
+
+    .hero p {
+      margin-top: 1.25rem;
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 650px;
+    }
+
+    .hero .cta {
+      margin-top: 2.5rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.9rem 1.4rem;
+      border-radius: 6px;
+      background-color: var(--accent);
+      color: white;
+      font-weight: 600;
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    /* ABOUT */
+    .about {
+      padding: 4.5rem 0;
+    }
+
+    .about h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+      letter-spacing: -0.01em;
+    }
+
+    .about p {
+      max-width: 800px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .pillars {
+      margin-top: 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .pillar {
+      background: white;
+      padding: 1.6rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    }
+
+    .pillar h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .pillar p {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    /* CALL TO ACTION */
+    .callout {
+      padding: 4rem 0;
+      background-color: var(--accent-soft);
+      text-align: center;
+    }
+
+    .callout h2 {
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .callout p {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 2.5rem 0;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* RESPONSIVE TWEAKS */
+    @media (max-width: 600px) {
+      .hero {
+        padding: 4.5rem 0 4rem;
+      }
+
+      .about,
+      .callout {
+        padding: 3.5rem 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1>Workreate exists to help people create lasting value with their God-given gifts.</h1>
+      <p>
+        We believe work is more than survival or status. When individuals are free to build,
+        serve, and exchange value voluntarily, the whole world flourishes.
+      </p>
+      <div class="cta">
+        <a href="#about" class="button">Learn What We Stand For</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>Our Vision</h2>
+      <p>
+        Workreate champions a world where creativity, responsibility, and stewardship are
+        decentralized—resting in the hands of individuals and communities rather than distant
+        institutions. We believe this leads to greater dignity, resilience, and abundance for all.
+      </p>
+
+      <div class="pillars">
+        <div class="pillar">
+          <h3>Decentralized Work</h3>
+          <p>
+            Meaningful work should be accessible to anyone willing to create value, regardless
+            of gatekeepers, geography, or credentials.
+          </p>
+        </div>
+        <div class="pillar">
+          <h3>Decentralized Power</h3>
+          <p>
+            Healthy societies distribute authority, encourage responsibility, and reward service
+            rather than consolidation and control.
+          </p>
+        </div>
+        <div class="pillar">
+          <h3>Decentralized Money</h3>
+          <p>
+            Sound, transparent money protects the fruits of human labor and enables voluntary
+            cooperation across borders and generations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section class="callout">
+    <div class="container">
+      <h2>Build Something That Matters</h2>
+      <p>
+        Whether you’re an artist, builder, entrepreneur, or steward, your work can bless others.
+        Join us in cultivating a culture of creation, responsibility, and abundance.
+      </p>
+      <a href="#" class="button">Get Involved</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Workreate. Create value. Serve others. Steward wisely.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
