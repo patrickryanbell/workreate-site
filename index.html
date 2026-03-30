@@ -448,6 +448,23 @@
 .belief-card-man:hover {
   border-color: var(--accent-orange);
 }
+
+.belief-icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.belief-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--accent-orange);
+}
   </style>
 </head>
 
@@ -519,29 +536,55 @@
 
       <div class="belief-grid belief-grid-5 belief-grid-man">
   <div class="belief-card belief-card-man">
-    <span class="belief-icon">🛠️</span>
-    <p><strong>Work</strong></p>
+  <div class="belief-icon-wrap">
+    <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+      <path d="M14 7l-7 7M7 7l7 7" stroke-linecap="round"/>
+    </svg>
   </div>
+  <p><strong>Work</strong></p>
+</div>
 
   <div class="belief-card belief-card-man">
-    <span class="belief-icon">💰</span>
-    <p><strong>Money</strong></p>
+  <div class="belief-icon-wrap">
+    <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+      <circle cx="12" cy="12" r="8"/>
+      <path d="M12 8v8M9.5 10.5c0-1 1-1.5 2.5-1.5s2.5.5 2.5 1.5-1 1.5-2.5 1.5-2.5.5-2.5 1.5 1 1.5 2.5 1.5 2.5-.5 2.5-1.5"/>
+    </svg>
   </div>
+  <p><strong>Money</strong></p>
+</div>
 
   <div class="belief-card belief-card-man">
-    <span class="belief-icon">⚖️</span>
-    <p><strong>Power</strong></p>
+  <div class="belief-icon-wrap">
+    <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+      <path d="M12 3v18"/>
+      <path d="M5 7h14"/>
+      <path d="M7 7l-3 5h6l-3-5z"/>
+      <path d="M17 7l-3 5h6l-3-5z"/>
+    </svg>
   </div>
+  <p><strong>Power</strong></p>
+</div>
 
   <div class="belief-card belief-card-man">
-    <span class="belief-icon">🏡</span>
-    <p><strong>Family</strong></p>
+  <div class="belief-icon-wrap">
+    <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+      <path d="M3 10l9-7 9 7"/>
+      <path d="M5 10v10h14V10"/>
+    </svg>
   </div>
+  <p><strong>Family</strong></p>
+</div>
 
   <div class="belief-card belief-card-man">
-    <span class="belief-icon">📚</span>
-    <p><strong>Education</strong></p>
+  <div class="belief-icon-wrap">
+    <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+      <path d="M4 19V5l8-2 8 2v14"/>
+      <path d="M12 3v16"/>
+    </svg>
   </div>
+  <p><strong>Education</strong></p>
+</div>
 </div>
     </div>
   </div>
