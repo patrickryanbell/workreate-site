@@ -11,11 +11,13 @@
 
   <style>
     :root {
-      --bg: #f9f9f7;
-      --text: #1f2933;
-      --muted: #6b7280;
-      --max-width: 1100px;
-    }
+  --bg: #f9f9f7;
+  --text: #1f2933;
+  --muted: #6b7280;
+  --max-width: 1100px;
+
+  --accent-orange: #f97316; /* 👈 ADD THIS LINE */
+}
 
     * {
       box-sizing: border-box;
@@ -147,21 +149,20 @@
 .button {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  padding: 0.85rem 1.2rem;
+  padding: 0.75rem 1.25rem;
   border-radius: 999px;
-  border: 1px solid #e5e7eb;
+
+  border: 1px solid var(--accent-orange); /* 👈 NEW */
   background: #ffffff;
   color: #0f172a;
+
   font-weight: 500;
-  transition: background 0.15s ease, border-color 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .button:hover {
-  background: #f8fafc;
-  border-color: #d1d5db;
-  box-shadow: none;
-  transform: none;
+  background: #fff7ed; /* very light orange tint */
+  border-color: #ea580c;
 }
 
 /* Mobile spacing */
@@ -205,6 +206,21 @@
   margin-right: auto;
 }
 
+/* Section accent line */
+.belief-block h2 {
+  position: relative;
+}
+
+.belief-block h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--accent-orange);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
 .belief-grid {
   margin-top: 2rem;
   display: grid;
@@ -220,11 +236,10 @@
 }
 
 .belief-card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
   border-radius: 22px;
   padding: 1.4rem 1.2rem;
   height: 140px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -232,11 +247,20 @@
 
 .belief-card p {
   margin: 0;
-  color: #0f172a;
-  font-size: 0.95rem;
-  line-height: 1.4;
-  max-width: 14ch; /* 👈 key for clean stacking */
   text-align: center;
+}
+/* God section (strong, clean) */
+.belief-card-god {
+  background: #ffffff; /* 👈 back to white */
+  border: 1px solid #e5e7eb;
+}
+
+.belief-card-god p {
+  color: #0f172a;
+  font-size: 1rem; /* 👈 slightly stronger */
+  line-height: 1.5;
+  max-width: 16ch;
+  font-weight: 600; /* 👈 THIS is the key */
 }
 
 @media (max-width: 900px) {
@@ -399,6 +423,31 @@
     padding: 2.25rem 0 2.75rem;
   }
 }
+
+/* Man section */
+.belief-card-man {
+  flex-direction: column;
+  gap: 0.5rem;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+
+.belief-card-man p {
+  font-size: 1rem;
+  color: #0f172a;
+}
+
+.belief-card-man strong {
+  font-weight: 600;
+}
+
+.belief-card-man {
+  transition: border-color 0.15s ease;
+}
+
+.belief-card-man:hover {
+  border-color: var(--accent-orange);
+}
   </style>
 </head>
 
@@ -447,44 +496,53 @@
       <h2>The realm of God is centralized.</h2>
 
       <div class="belief-grid belief-grid-4">
-        <div class="belief-card">
-  <p>There is One, True God—and His son, Jesus Christ</p>
-</div>
+  <div class="belief-card belief-card-god">
+    <p>There is One, True God—and His Son, Jesus Christ</p>
+  </div>
 
-<div class="belief-card">
-  <p>He is the Way, the Truth, and the Life</p>
-</div>
+  <div class="belief-card belief-card-god">
+    <p>He is the Way, the Truth, and the Life</p>
+  </div>
 
-<div class="belief-card">
-  <p>Salvation comes through Him alone</p>
-</div>
+  <div class="belief-card belief-card-god">
+    <p>Salvation comes through Him alone</p>
+  </div>
 
-<div class="belief-card">
-  <p>He alone is worthy of your worship</p>
+  <div class="belief-card belief-card-god">
+    <p>He alone is worthy of your worship</p>
+  </div>
 </div>
-      </div>
     </div>
 
     <div class="belief-block belief-block-divider">
       <h2>The realm of Man should be decentralized.</h2>
 
-      <div class="belief-grid belief-grid-5">
-        <div class="belief-card">
-          <p>Work</p>
-        </div>
-        <div class="belief-card">
-          <p>Money</p>
-        </div>
-        <div class="belief-card">
-          <p>Power</p>
-        </div>
-        <div class="belief-card">
-          <p>Family</p>
-        </div>
-        <div class="belief-card">
-          <p>Education</p>
-        </div>
-      </div>
+      <div class="belief-grid belief-grid-5 belief-grid-man">
+  <div class="belief-card belief-card-man">
+    <span class="belief-icon">🛠️</span>
+    <p><strong>Work</strong></p>
+  </div>
+
+  <div class="belief-card belief-card-man">
+    <span class="belief-icon">💰</span>
+    <p><strong>Money</strong></p>
+  </div>
+
+  <div class="belief-card belief-card-man">
+    <span class="belief-icon">⚖️</span>
+    <p><strong>Power</strong></p>
+  </div>
+
+  <div class="belief-card belief-card-man">
+    <span class="belief-icon">🏡</span>
+    <p><strong>Family</strong></p>
+  </div>
+
+  <div class="belief-card belief-card-man">
+    <span class="belief-icon">📚</span>
+    <p><strong>Education</strong></p>
+  </div>
+</div>
     </div>
   </div>
 </section>
