@@ -2,22 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Workreate</title>
 
-  <link rel="icon" type="image/png" href="favicon-v4.png">
-
-  <meta name="description" content="Workreate inspires people to use their God-given gifts to create value through decentralized work, power, and money." />
+  <link rel="icon" type="image/png" href="favicon-v4.png" />
+  <meta
+    name="description"
+    content="Workreate inspires people to use their God-given gifts to create value through decentralized work, power, and money."
+  />
 
   <style>
     :root {
-  --bg: #f9f9f7;
-  --text: #1f2933;
-  --muted: #6b7280;
-  --max-width: 1100px;
-
-  --accent-orange: #f97316; /* 👈 ADD THIS LINE */
-}
+      --bg: #f9f9f7;
+      --text: #1f2933;
+      --muted: #6b7280;
+      --max-width: 1100px;
+      --accent-orange: #f97316;
+    }
 
     * {
       box-sizing: border-box;
@@ -27,7 +28,7 @@
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Roboto, Helvetica, Arial, sans-serif;
+        Roboto, Helvetica, Arial, sans-serif;
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -44,576 +45,500 @@
       padding: 0 1.5rem;
     }
 
-    /* Header / Logo */
-.site-header {
-  background: #ffffff;
-}
+    .site-header {
+      background: #ffffff;
+    }
 
-.header-inner {
-  display: flex;
-  align-items: center;
-  height: 120px; /* gives breathing room around a 96px logo */
-}
+    .header-inner {
+      display: flex;
+      align-items: center;
+      height: 120px;
+    }
 
-.logo-link {
-  display: inline-flex;
-  align-items: center;
-}
+    .logo-link {
+      display: inline-flex;
+      align-items: center;
+    }
 
-.logo {
-  height: 96px;
-  width: auto;
-  display: block;
-  margin-left: -32px;
-}
+    .logo {
+      height: 96px;
+      width: auto;
+      display: block;
+      margin-left: -32px;
+    }
 
-/* Mobile tuning */
-@media (max-width: 600px) {
-  .header-inner {
-    height: 96px;
-  }
-  .logo {
-    height: 72px;
-  }
-}
-/* Hero (Scoutspace-style rhythm) */
-/* Hero layout: left copy, right video */
-.hero {
-  padding: 4.5rem 0 4.5rem;
-  background: #ffffff;
-  border-bottom: none;
-}
+    .hero {
+      padding: 4.5rem 0;
+      background: #ffffff;
+    }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-  gap: 3.5rem;
-  align-items: start;
-}
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+      gap: 3.5rem;
+      align-items: start;
+    }
 
-.hero-copy {
-  max-width: 100%;
-}
+    .hero-copy {
+      max-width: 100%;
+    }
 
-.hero-copy h1 {
-  font-size: clamp(2.4rem, 3.8vw, 3.6rem);
-  font-weight: 600;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  margin: 0;
-  max-width: 18ch; /* 👈 this is the magic */
-}
+    .hero-copy h1 {
+      font-size: clamp(2.4rem, 3.8vw, 3.6rem);
+      font-weight: 600;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin: 0;
+      max-width: 18ch;
+    }
 
-.hero-copy p {
-  margin-top: 1.25rem;
-  font-size: 1.1rem;
-  line-height: 1.75;
-  color: #475569;
-  max-width: 46rem;
-}
+    .hero-copy p {
+      margin-top: 1.25rem;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #475569;
+      max-width: 46rem;
+    }
 
-.hero-copy .cta {
-  margin-top: 2rem;
-}
+    .hero-copy .cta {
+      margin-top: 2rem;
+    }
 
-.hero-media {
-  width: 100%;
-}
+    .hero-media {
+      width: 100%;
+    }
 
-.video-placeholder {
-  aspect-ratio: 16 / 10;
-  width: 100%;
-  border: 1px solid #e5e7eb;
-  border-radius: 24px;
-  background: #f8fafc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #64748b;
-  font-size: 0.95rem;
-}
+    .video-placeholder {
+      aspect-ratio: 16 / 10;
+      width: 100%;
+      border: 1px solid #e5e7eb;
+      border-radius: 24px;
+      background: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      font-size: 0.95rem;
+    }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent-orange);
+      background: #ffffff;
+      color: #0f172a;
+      font-weight: 500;
+      transition: all 0.15s ease;
+    }
 
-  .hero-copy p {
-    max-width: 100%;
-  }
-}
+    .button:hover {
+      background: #fff7ed;
+      border-color: #ea580c;
+    }
 
-/* Make CTA feel like Scoutspace: understated, pill, soft border */
-.button {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.75rem 1.25rem;
-  border-radius: 999px;
+    .about {
+      padding: 5.5rem 0;
+      background: #f8f8f5;
+    }
 
-  border: 1px solid var(--accent-orange); /* 👈 NEW */
-  background: #ffffff;
-  color: #0f172a;
+    .about-shell {
+      max-width: 980px;
+    }
 
-  font-weight: 500;
-  transition: all 0.15s ease;
-}
+    .belief-block {
+      text-align: center;
+    }
 
-.button:hover {
-  background: #fff7ed; /* very light orange tint */
-  border-color: #ea580c;
-}
+    .belief-block-divider {
+      margin-top: 4.5rem;
+      padding-top: 4.5rem;
+      border-top: 1px solid #e5e7eb;
+    }
 
-/* Mobile spacing */
-@media (max-width: 600px) {
-  .hero {
-    padding: 4.25rem 0 3.5rem;
-  }
+    .belief-block h2 {
+      position: relative;
+      font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      max-width: 18ch;
+      margin: 0 auto;
+    }
 
-  .hero p {
-    font-size: 1.05rem;
-  }
-}
+    .belief-block h2::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: var(--accent-orange);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
 
-/* About / Beliefs */
-.about {
-  padding: 5.5rem 0;
-  background: #f8f8f5;
-}
+    .belief-grid {
+      margin-top: 2rem;
+      display: grid;
+      gap: 1rem;
+    }
 
-.about-shell {
-  max-width: 980px;
-}
+    .belief-grid-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
 
-.belief-block {
-  text-align: center;
-}
+    .belief-grid-5 {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
 
-.belief-block-divider {
-  margin-top: 4.5rem;
-  padding-top: 4.5rem;
-  border-top: 1px solid #e5e7eb;
-}
+    .belief-card {
+      border-radius: 22px;
+      padding: 1.4rem 1.2rem;
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.belief-block h2 {
-  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
-  line-height: 1.15;
-  letter-spacing: -0.03em;
-  margin: 0;
-  max-width: 18ch;
-  margin-left: auto;
-  margin-right: auto;
-}
+    .belief-card p {
+      margin: 0;
+      text-align: center;
+    }
 
-/* Section accent line */
-.belief-block h2 {
-  position: relative;
-}
+    .belief-card-god {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+    }
 
-.belief-block h2::after {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 2px;
-  background: var(--accent-orange);
-  margin: 1rem auto 0;
-  border-radius: 2px;
-}
+    .belief-card-god p {
+      color: #0f172a;
+      font-size: 1rem;
+      line-height: 1.5;
+      max-width: 16ch;
+      font-weight: 600;
+    }
 
-.belief-grid {
-  margin-top: 2rem;
-  display: grid;
-  gap: 1rem;
-}
+    .belief-card-man {
+      flex-direction: column;
+      gap: 0.5rem;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      transition: border-color 0.15s ease;
+    }
 
-.belief-grid-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
+    .belief-card-man:hover {
+      border-color: var(--accent-orange);
+    }
 
-.belief-grid-5 {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
+    .belief-card-man p {
+      font-size: 1rem;
+      color: #0f172a;
+    }
 
-.belief-card {
-  border-radius: 22px;
-  padding: 1.4rem 1.2rem;
-  height: 140px;
+    .belief-card-man strong {
+      font-weight: 600;
+    }
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    .belief-icon-wrap {
+      width: 72px;
+      height: 72px;
+      border-radius: 999px;
+      background: #f1f5f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.75rem;
+    }
 
-.belief-card p {
-  margin: 0;
-  text-align: center;
-}
-/* God section (strong, clean) */
-.belief-card-god {
-  background: #ffffff; /* 👈 back to white */
-  border: 1px solid #e5e7eb;
-}
+    .belief-icon {
+      width: 32px;
+      height: 32px;
+      color: var(--accent-orange);
+      flex-shrink: 0;
+    }
 
-.belief-card-god p {
-  color: #0f172a;
-  font-size: 1rem; /* 👈 slightly stronger */
-  line-height: 1.5;
-  max-width: 16ch;
-  font-weight: 600; /* 👈 THIS is the key */
-}
+    .callout {
+      padding: 5rem 0 5.75rem;
+      background: #ffffff;
+      border-top: 1px solid #e5e7eb;
+    }
 
-@media (max-width: 900px) {
-  .belief-grid-5 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
+    .callout .container {
+      max-width: 860px;
+    }
 
-@media (max-width: 700px) {
-  .about {
-    padding: 4.25rem 0;
-  }
+    .callout h2 {
+      font-size: 1.45rem;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
 
-  .belief-block-divider {
-    margin-top: 3.5rem;
-    padding-top: 3.5rem;
-  }
+    .callout p {
+      margin-top: 1rem;
+      color: #475569;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      max-width: 42rem;
+    }
 
-  .belief-grid-4,
-  .belief-grid-5 {
-    grid-template-columns: 1fr;
-  }
+    .callout .button {
+      margin-top: 1.75rem;
+    }
 
-  .belief-card {
-    min-height: auto;
-    padding: 1.2rem 1rem;
-  }
-}
+    .site-footer {
+      padding: 2.75rem 0 3.25rem;
+      background: #0f172a;
+      color: #e5e7eb;
+    }
 
-/* Pillars become clean “rows” with rules */
-.pillars {
-  margin-top: 2.75rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0; /* rules create separation instead of gaps */
-  border-top: 1px solid #e5e7eb;
-}
+    .footer-inner {
+      max-width: 860px;
+      text-align: center;
+    }
 
-.pillar {
-  background: transparent;
-  padding: 1.35rem 0;
-  border-bottom: 1px solid #e5e7eb;
-  box-shadow: none;
-  border-radius: 0;
-}
+    .footer-line {
+      margin: 0;
+      color: #cbd5f5;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
 
-.pillar h3 {
-  font-size: 1.05rem;
-  letter-spacing: -0.01em;
-  margin: 0;
-}
+    .footer-nav {
+      margin-top: 0.9rem;
+      display: flex;
+      gap: 1.25rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-.pillar p {
-  margin-top: 0.55rem;
-  color: #475569;
-  font-size: 1rem;
-  line-height: 1.7;
-  max-width: 46rem;
-}
+    .footer-nav a {
+      color: #e5e7eb;
+      font-size: 0.95rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s ease;
+    }
 
-/* Optional: subtle two-column feel on wide screens */
-@media (min-width: 900px) {
-  .pillar {
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    column-gap: 2rem;
-    align-items: start;
-  }
+    .footer-nav a:hover {
+      border-bottom-color: #64748b;
+    }
 
-  .pillar p {
-    margin-top: 0; /* aligns with heading in grid */
-  }
-}
 
-/* Mobile spacing */
-@media (max-width: 600px) {
-  .about {
-    padding: 4.25rem 0;
-  }
-}
-/* Callout (quiet, editorial close) */
-.callout {
-  padding: 5rem 0 5.75rem;
-  background: #ffffff;
-  border-top: 1px solid #e5e7eb;
-}
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
 
-.callout .container {
-  max-width: 860px;
-}
+      .hero-copy p {
+        max-width: 100%;
+      }
 
-.callout h2 {
-  font-size: 1.45rem;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-  margin: 0;
-}
+      .belief-grid-5 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
 
-.callout p {
-  margin-top: 1rem;
-  color: #475569;
-  font-size: 1.05rem;
-  line-height: 1.75;
-  max-width: 42rem;
-}
+    @media (max-width: 700px) {
+      .about {
+        padding: 4.25rem 0;
+      }
 
-/* CTA button: understated, consistent with hero */
-.callout .button {
-  margin-top: 1.75rem;
-}
+      .belief-block-divider {
+        margin-top: 3.5rem;
+        padding-top: 3.5rem;
+      }
 
-/* Mobile */
-@media (max-width: 600px) {
-  .callout {
-    padding: 4.25rem 0 4.75rem;
-  }
-}
-/* Footer (quiet, editorial) */
-.site-footer {
-  padding: 2.75rem 0 3.25rem;
-  background: #0f172a;
-  color: #e5e7eb;
-}
+      .belief-grid-4,
+      .belief-grid-5 {
+        grid-template-columns: 1fr;
+      }
 
-.footer-inner {
-  max-width: 860px;
-  text-align: center;
-}
+      .belief-card {
+        min-height: auto;
+        padding: 1.2rem 1rem;
+      }
+    }
 
-.footer-line {
-  margin: 0;
-  color: #cbd5f5;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
+    @media (max-width: 600px) {
+      .header-inner {
+        height: 96px;
+      }
 
-.footer-nav {
-  margin-top: 0.9rem;
-  display: flex;
-  gap: 1.25rem;
-  justify-content: center; /* ← this is the key line */
-  flex-wrap: wrap;
-}
+      .logo {
+        height: 72px;
+      }
 
-.footer-nav a {
-  color: #e5e7eb;
-  font-size: 0.95rem;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.15s ease;
-}
+      .hero {
+        padding: 4.25rem 0 3.5rem;
+      }
 
-.footer-nav a:hover {
-  border-bottom-color: #64748b;
-}
+      .hero p {
+        font-size: 1.05rem;
+      }
 
-/* Mobile */
-@media (max-width: 600px) {
-  .site-footer {
-    padding: 2.25rem 0 2.75rem;
-  }
-}
+      .about {
+        padding: 4.25rem 0;
+      }
 
-/* Man section */
-.belief-card-man {
-  flex-direction: column;
-  gap: 0.5rem;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-}
+      .callout {
+        padding: 4.25rem 0 4.75rem;
+      }
 
-.belief-card-man p {
-  font-size: 1rem;
-  color: #0f172a;
-}
-
-.belief-card-man strong {
-  font-weight: 600;
-}
-
-.belief-card-man {
-  transition: border-color 0.15s ease;
-}
-
-.belief-card-man:hover {
-  border-color: var(--accent-orange);
-}
-
-.belief-icon-wrap {
-  width: 64px;
-  height: 64px;
-  border-radius: 999px;
-  background: #f1f5f9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0.5rem;
-}
-
-.belief-icon {
-  width: 28px;
-  height: 28px;
-  color: var(--accent-orange);
-}
+      .site-footer {
+        padding: 2.25rem 0 2.75rem;
+      }
+    }
   </style>
 </head>
 
 <body>
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="logo-link" href="./" aria-label="Workreate home">
-      <img src="workreate_clean_logo.svg" alt="Workreate" class="logo" />
-    </a>
-  </div>
-</header>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo-link" href="./" aria-label="Workreate home">
+        <img src="workreate_clean_logo.svg" alt="Workreate" class="logo" />
+      </a>
+    </div>
+  </header>
 
-  <!-- HERO -->
   <section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <h1>
-  You were created to build something that matters.
-</h1>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>You were created to build something that matters.</h1>
 
-      <p>
-        Work is more than survival or status.<br>
-        You were created to bring something into the world—<br>
-        through your gifts, your effort, and your stewardship.<br><br>
-        When people are free to build, serve, and exchange value,<br>
-        communities flourish.
-      </p>
+        <p>
+          Work is more than survival or status.<br />
+          You were created to bring something into the world—<br />
+          through your gifts, your effort, and your stewardship.<br /><br />
+          When people are free to build, serve, and exchange value,<br />
+          communities flourish.
+        </p>
 
-      <div class="cta">
-        <a href="#about" class="button">Learn What We Stand For</a>
+        <div class="cta">
+          <a href="#about" class="button">Learn What We Stand For</a>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="video-placeholder">
+          <span>Video coming soon</span>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="hero-media">
-      <div class="video-placeholder">
-        <span>Video coming soon</span>
+  <section id="about" class="about">
+    <div class="container about-shell">
+      <div class="belief-block">
+        <h2>The realm of God is centralized.</h2>
+
+        <div class="belief-grid belief-grid-4">
+          <div class="belief-card belief-card-god">
+            <p>There is One, True God—and His Son, Jesus Christ</p>
+          </div>
+
+          <div class="belief-card belief-card-god">
+            <p>He is the Way, the Truth, and the Life</p>
+          </div>
+
+          <div class="belief-card belief-card-god">
+            <p>Salvation comes through Him alone</p>
+          </div>
+
+          <div class="belief-card belief-card-god">
+            <p>He alone is worthy of your worship</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="belief-block belief-block-divider">
+        <h2>The realm of Man should be decentralized.</h2>
+
+        <div class="belief-grid belief-grid-5 belief-grid-man">
+          <div class="belief-card belief-card-man">
+            <div class="belief-icon-wrap">
+              <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 4l6 6" />
+                <path d="M13 5l2-2 6 6-2 2" />
+                <path d="M3 21l7-7" />
+                <path d="M10 10l4 4" />
+              </svg>
+            </div>
+            <p><strong>Work</strong></p>
+          </div>
+
+          <div class="belief-card belief-card-man">
+            <div class="belief-icon-wrap">
+              <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="7" />
+                <path d="M10 6.5v11" />
+                <path d="M13.2 6.5v11" />
+                <path d="M9.5 8.2h3.1a1.9 1.9 0 0 1 0 3.8H9.5z" />
+                <path d="M9.5 12h3.6a2 2 0 0 1 0 4H9.5z" />
+              </svg>
+            </div>
+            <p><strong>Money</strong></p>
+          </div>
+
+          <div class="belief-card belief-card-man">
+            <div class="belief-icon-wrap">
+              <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 4v16" />
+                <path d="M6 7h12" />
+                <path d="M8 7l-3 5h6l-3-5z" />
+                <path d="M16 7l-3 5h6l-3-5z" />
+              </svg>
+            </div>
+            <p><strong>Power</strong></p>
+          </div>
+
+          <div class="belief-card belief-card-man">
+            <div class="belief-icon-wrap">
+              <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 10.5L12 4l8 6.5" />
+                <path d="M6 10v9h12v-9" />
+                <path d="M10 19v-5h4v5" />
+              </svg>
+            </div>
+            <p><strong>Family</strong></p>
+          </div>
+
+          <div class="belief-card belief-card-man">
+            <div class="belief-icon-wrap">
+              <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 6.5L12 4l8 2.5" />
+                <path d="M4 6.5v11L12 20l8-2.5v-11" />
+                <path d="M12 4v16" />
+              </svg>
+            </div>
+            <p><strong>Education</strong></p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  <!-- ABOUT -->
- <section id="about" class="about">
-  <div class="container about-shell">
-    <div class="belief-block">
-      <h2>The realm of God is centralized.</h2>
-
-      <div class="belief-grid belief-grid-4">
-  <div class="belief-card belief-card-god">
-    <p>There is One, True God—and His Son, Jesus Christ</p>
-  </div>
-
-  <div class="belief-card belief-card-god">
-    <p>He is the Way, the Truth, and the Life</p>
-  </div>
-
-  <div class="belief-card belief-card-god">
-    <p>Salvation comes through Him alone</p>
-  </div>
-
-  <div class="belief-card belief-card-god">
-    <p>He alone is worthy of your worship</p>
-  </div>
-</div>
-    </div>
-
-    <div class="belief-block belief-block-divider">
-      <h2>The realm of Man should be decentralized.</h2>
-
-      <div class="belief-grid belief-grid-5 belief-grid-man">
-  <div class="belief-card belief-card-man">
-  <div class="belief-icon-wrap">
-    <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-      <path d="M14 7l-7 7M7 7l7 7" stroke-linecap="round"/>
-    </svg>
-  </div>
-  <p><strong>Work</strong></p>
-</div>
-
-  <div class="belief-card belief-card-man">
-  <div class="belief-icon-wrap">
-    <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-      <circle cx="12" cy="12" r="8"/>
-      <path d="M12 8v8M9.5 10.5c0-1 1-1.5 2.5-1.5s2.5.5 2.5 1.5-1 1.5-2.5 1.5-2.5.5-2.5 1.5 1 1.5 2.5 1.5 2.5-.5 2.5-1.5"/>
-    </svg>
-  </div>
-  <p><strong>Money</strong></p>
-</div>
-
-  <div class="belief-card belief-card-man">
-  <div class="belief-icon-wrap">
-    <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-      <path d="M12 3v18"/>
-      <path d="M5 7h14"/>
-      <path d="M7 7l-3 5h6l-3-5z"/>
-      <path d="M17 7l-3 5h6l-3-5z"/>
-    </svg>
-  </div>
-  <p><strong>Power</strong></p>
-</div>
-
-  <div class="belief-card belief-card-man">
-  <div class="belief-icon-wrap">
-    <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-      <path d="M3 10l9-7 9 7"/>
-      <path d="M5 10v10h14V10"/>
-    </svg>
-  </div>
-  <p><strong>Family</strong></p>
-</div>
-
-  <div class="belief-card belief-card-man">
-  <div class="belief-icon-wrap">
-    <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-      <path d="M4 19V5l8-2 8 2v14"/>
-      <path d="M12 3v16"/>
-    </svg>
-  </div>
-  <p><strong>Education</strong></p>
-</div>
-</div>
-    </div>
-  </div>
-</section>
-
-  <!-- CALL TO ACTION -->
   <section class="callout">
     <div class="container">
       <h2>Build Something That Matters</h2>
       <p>
-        Whether you’re an artist, builder, entrepreneur, or steward, your work can bless others.
-        Join us in cultivating a culture of creation, responsibility, and abundance.
+        Whether you’re an artist, builder, entrepreneur, or steward, your work
+        can bless others. Join us in cultivating a culture of creation,
+        responsibility, and abundance.
       </p>
       <a href="#" class="button">Get Involved</a>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
-  <div class="container footer-inner">
-    <p class="footer-line">
-      &copy; 2026 Workreate. Create value. Serve others. Steward wisely.
-    </p>
-    <nav class="footer-nav" aria-label="Footer">
-      <a href="#about">Vision</a>
-      <a href="#" rel="noopener">Contact</a>
-    </nav>
-  </div>
-</footer>
-
+    <div class="container footer-inner">
+      <p class="footer-line">
+        &copy; 2026 Workreate. Create value. Serve others. Steward wisely.
+      </p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#about">Vision</a>
+        <a href="#" rel="noopener">Contact</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
