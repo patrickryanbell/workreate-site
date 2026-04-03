@@ -217,37 +217,42 @@
       font-weight: 600;
     }
 
-    .belief-card-man {
-      flex-direction: column;
-      gap: 0.5rem;
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      transition: border-color 0.15s ease;
-    }
+   .belief-card-man {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 1.75rem 1.25rem;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  transition: border-color 0.15s ease;
+}
 
     .belief-card-man:hover {
       border-color: var(--accent-orange);
     }
 
     .belief-card-man p {
-      font-size: 1rem;
-      color: #0f172a;
-    }
+  margin: 0;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
 
     .belief-card-man strong {
       font-weight: 600;
     }
 
     .belief-icon-wrap {
-      width: 72px;
-      height: 72px;
-      border-radius: 999px;
-      background: #f1f5f9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 0.75rem;
-    }
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  background: transparent; /* 👈 remove grey oval */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
 
     .belief-icon {
       width: 32px;
@@ -255,6 +260,41 @@
       color: var(--accent-orange);
       flex-shrink: 0;
     }
+
+    .belief-icon-img {
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
+}
+.belief-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.belief-card-work {
+  justify-content: center;
+  gap: 0;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+
+.belief-card-work .belief-icon-wrap {
+  width: 84px;
+  height: 84px;
+  margin: 0 0 0.5rem 0;
+}
+
+.belief-card-work .belief-icon-img {
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
+  display: block;
+}
+
+.belief-card-work p {
+  margin: 0;
+  line-height: 1;
+}
 
     .callout {
       padding: 5rem 0 5.75rem;
@@ -453,68 +493,61 @@
       <div class="belief-block belief-block-divider">
         <h2>The realm of Man should be decentralized.</h2>
 
-        <div class="belief-grid belief-grid-5 belief-grid-man">
-          <div class="belief-card belief-card-man">
-            <div class="belief-icon-wrap">
-              <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 4l6 6" />
-                <path d="M13 5l2-2 6 6-2 2" />
-                <path d="M3 21l7-7" />
-                <path d="M10 10l4 4" />
-              </svg>
-            </div>
-            <p><strong>Work</strong></p>
-          </div>
+       <div class="belief-grid belief-grid-5 belief-grid-man">
+  <div class="belief-card belief-card-man belief-card-work">
+  <div class="belief-icon-wrap">
+    <img src="work-icon.png" class="belief-icon-img" alt="Work icon" />
+  </div>
+  <p><strong>Work</strong></p>
+</div>
 
-          <div class="belief-card belief-card-man">
-            <div class="belief-icon-wrap">
-              <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="7" />
-                <path d="M10 6.5v11" />
-                <path d="M13.2 6.5v11" />
-                <path d="M9.5 8.2h3.1a1.9 1.9 0 0 1 0 3.8H9.5z" />
-                <path d="M9.5 12h3.6a2 2 0 0 1 0 4H9.5z" />
-              </svg>
-            </div>
-            <p><strong>Money</strong></p>
-          </div>
-
-          <div class="belief-card belief-card-man">
-            <div class="belief-icon-wrap">
-              <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 4v16" />
-                <path d="M6 7h12" />
-                <path d="M8 7l-3 5h6l-3-5z" />
-                <path d="M16 7l-3 5h6l-3-5z" />
-              </svg>
-            </div>
-            <p><strong>Power</strong></p>
-          </div>
-
-          <div class="belief-card belief-card-man">
-            <div class="belief-icon-wrap">
-              <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 10.5L12 4l8 6.5" />
-                <path d="M6 10v9h12v-9" />
-                <path d="M10 19v-5h4v5" />
-              </svg>
-            </div>
-            <p><strong>Family</strong></p>
-          </div>
-
-          <div class="belief-card belief-card-man">
-            <div class="belief-icon-wrap">
-              <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 6.5L12 4l8 2.5" />
-                <path d="M4 6.5v11L12 20l8-2.5v-11" />
-                <path d="M12 4v16" />
-              </svg>
-            </div>
-            <p><strong>Education</strong></p>
-          </div>
-        </div>
-      </div>
+  <div class="belief-card belief-card-man">
+    <div class="belief-icon-wrap">
+      <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="7" />
+        <path d="M10 6.5v11" />
+        <path d="M13.2 6.5v11" />
+        <path d="M9.5 8.2h3.1a1.9 1.9 0 0 1 0 3.8H9.5z" />
+        <path d="M9.5 12h3.6a2 2 0 0 1 0 4H9.5z" />
+      </svg>
     </div>
+    <p><strong>Money</strong></p>
+  </div>
+
+  <div class="belief-card belief-card-man">
+    <div class="belief-icon-wrap">
+      <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 4v16" />
+        <path d="M6 7h12" />
+        <path d="M8 7l-3 5h6l-3-5z" />
+        <path d="M16 7l-3 5h6l-3-5z" />
+      </svg>
+    </div>
+    <p><strong>Power</strong></p>
+  </div>
+
+  <div class="belief-card belief-card-man">
+    <div class="belief-icon-wrap">
+      <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 10.5L12 4l8 6.5" />
+        <path d="M6 10v9h12v-9" />
+        <path d="M10 19v-5h4v5" />
+      </svg>
+    </div>
+    <p><strong>Family</strong></p>
+  </div>
+
+  <div class="belief-card belief-card-man">
+    <div class="belief-icon-wrap">
+      <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6.5L12 4l8 2.5" />
+        <path d="M4 6.5v11L12 20l8-2.5v-11" />
+        <path d="M12 4v16" />
+      </svg>
+    </div>
+    <p><strong>Education</strong></p>
+  </div>
+</div>
   </section>
 
   <section class="callout">
