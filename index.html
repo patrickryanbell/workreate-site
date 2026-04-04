@@ -295,6 +295,31 @@
   margin: 0;
   line-height: 1;
 }
+.belief-card-money {
+  justify-content: center;
+  gap: 0;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+
+.belief-card-money .belief-icon-wrap {
+  width: 84px;
+  height: 84px;
+  margin: 0 0 0.5rem 0;
+}
+
+.belief-card-money .belief-icon-img {
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
+  display: block;
+  transform: scale(1.06); /* 👈 fixes visual size mismatch */
+}
+
+.belief-card-money p {
+  margin: 0;
+  line-height: 1;
+}
 
     .callout {
       padding: 5rem 0 5.75rem;
@@ -501,18 +526,12 @@
   <p><strong>Work</strong></p>
 </div>
 
-  <div class="belief-card belief-card-man">
-    <div class="belief-icon-wrap">
-      <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="7" />
-        <path d="M10 6.5v11" />
-        <path d="M13.2 6.5v11" />
-        <path d="M9.5 8.2h3.1a1.9 1.9 0 0 1 0 3.8H9.5z" />
-        <path d="M9.5 12h3.6a2 2 0 0 1 0 4H9.5z" />
-      </svg>
-    </div>
-    <p><strong>Money</strong></p>
+  <div class="belief-card belief-card-man belief-card-money">
+  <div class="belief-icon-wrap">
+    <img src="money-icon.png" class="belief-icon-img" alt="Money icon" />
   </div>
+  <p><strong>Money</strong></p>
+</div>
 
   <div class="belief-card belief-card-man">
     <div class="belief-icon-wrap">
