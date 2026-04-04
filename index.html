@@ -80,8 +80,8 @@
     }
 
     .hero-copy {
-      max-width: 100%;
-    }
+  max-width: 520px; /* 👈 key change */
+}
 
     .hero-copy h1 {
       font-size: clamp(2.4rem, 3.8vw, 3.6rem);
@@ -89,7 +89,7 @@
       line-height: 1.05;
       letter-spacing: -0.03em;
       margin: 0;
-      max-width: 18ch;
+      max-width: 16ch;
     }
 
     .hero-copy p {
@@ -97,7 +97,7 @@
       font-size: 1.1rem;
       line-height: 1.75;
       color: #475569;
-      max-width: 46rem;
+      max-width: 42ch;
     }
 
     .hero-copy .cta {
@@ -105,21 +105,27 @@
     }
 
     .hero-media {
-      width: 100%;
-    }
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
 
-    .video-placeholder {
-      aspect-ratio: 16 / 10;
-      width: 100%;
-      border: 1px solid #e5e7eb;
-      border-radius: 24px;
-      background: #f8fafc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #64748b;
-      font-size: 0.95rem;
-    }
+.hero-image {
+  width: 100%;
+  max-width: 620px;
+  aspect-ratio: 16 / 10;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transform: translateX(20px);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* crops instead of squishing */
+  object-position: center; /* adjust this next 👇 */
+  display: block;
+}
 
     .button {
       display: inline-flex;
@@ -471,12 +477,15 @@
         <h1>You were created to build something that matters.</h1>
 
         <p>
-          Work is more than survival or status.<br />
-          You were created to bring something into the world—<br />
-          through your gifts, your effort, and your stewardship.<br /><br />
-          When people are free to build, serve, and exchange value,<br />
-          communities flourish.
-        </p>
+  Work is more than survival or status.
+  You were created to bring something into the world—
+  through your gifts, your effort, and your stewardship.
+</p>
+
+<p>
+  When people are free to build, serve, and exchange value,
+  communities flourish.
+</p>
 
         <div class="cta">
           <a href="#about" class="button">Learn What We Stand For</a>
@@ -484,11 +493,10 @@
       </div>
 
       <div class="hero-media">
-        <div class="video-placeholder">
-          <span>Video coming soon</span>
-        </div>
-      </div>
-    </div>
+  <div class="hero-image">
+    <img src="bitcoin-network-earth.png" alt="Bitcoin unlocking human potential across the world" />
+  </div>
+</div>
   </section>
 
   <section id="about" class="about">
