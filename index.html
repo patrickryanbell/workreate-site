@@ -68,63 +68,90 @@
     }
 
     .hero {
-      padding: 4.5rem 0;
-      background: #ffffff;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-      gap: 3.5rem;
-      align-items: start;
-    }
-
-    .hero-copy {
-  max-width: 520px; /* 👈 key change */
+  padding: 3.75rem 0 4.75rem;
+  background: #ffffff;
 }
 
-    .hero-copy h1 {
-      font-size: clamp(2.4rem, 3.8vw, 3.6rem);
-      font-weight: 600;
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      margin: 0;
-      max-width: 16ch;
-    }
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
+  gap: 4rem;
+  align-items: center;
+}
 
-    .hero-copy p {
-      margin-top: 1.25rem;
-      font-size: 1.1rem;
-      line-height: 1.75;
-      color: #475569;
-      max-width: 42ch;
-    }
+.hero-copy {
+  max-width: 520px;
+}
 
-    .hero-copy .cta {
-      margin-top: 2rem;
-    }
+.hero-copy h1 {
+  font-size: clamp(2.4rem, 3.8vw, 3.6rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0;
+  max-width: 16ch;
+}
 
-    .hero-media {
+.hero-copy p {
+  margin-top: 1.2rem;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: #475569;
+  max-width: 38ch;
+}
+
+.hero-copy .mission {
+  margin-top: 1.75rem;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: #1f2933;
+  font-weight: 500;
+  max-width: 38ch;
+}
+
+.hero-copy .verse {
+  margin-top: 1.15rem;
+  font-size: 0.93rem;
+  line-height: 1.75;
+  color: #667085;
+  font-style: italic;
+  max-width: 36ch;
+}
+
+.hero-copy .verse span {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 0.84rem;
+  font-style: normal;
+  color: #6b7280;
+}
+
+.hero-copy .cta {
+  margin-top: 2rem;
+}
+
+.hero-media {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .hero-image {
   width: 100%;
-  max-width: 620px;
+  max-width: 700px;
   aspect-ratio: 16 / 10;
   border-radius: 1.25rem;
   overflow: hidden;
-  transform: translateX(20px);
 }
 
 .hero-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;       /* crops instead of squishing */
-  object-position: center; /* adjust this next 👇 */
+  object-fit: cover;
+  object-position: center;
   display: block;
+  filter: saturate(0.95) contrast(1.02) brightness(0.97);
 }
 
     .button {
@@ -154,76 +181,76 @@
     }
 
     .belief-block {
-      text-align: center;
-    }
+  text-align: center;
+}
 
-    .belief-block-divider {
-      margin-top: 4.5rem;
-      padding-top: 4.5rem;
-      border-top: 1px solid #e5e7eb;
-    }
+.belief-block-divider {
+  margin-top: 4.5rem;
+  padding-top: 4.5rem;
+  border-top: 1px solid #e5e7eb;
+}
 
-    .belief-block h2 {
-      position: relative;
-      font-size: clamp(1.8rem, 2.8vw, 2.4rem);
-      line-height: 1.15;
-      letter-spacing: -0.03em;
-      max-width: 18ch;
-      margin: 0 auto;
-    }
+.belief-block h2 {
+  position: relative;
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  max-width: 18ch;
+  margin: 0 auto;
+}
 
-    .belief-block h2::after {
-      content: "";
-      display: block;
-      width: 40px;
-      height: 2px;
-      background: var(--accent-orange);
-      margin: 1rem auto 0;
-      border-radius: 2px;
-    }
+.belief-block h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--accent-orange);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
 
-    .belief-grid {
-      margin-top: 2rem;
-      display: grid;
-      gap: 1rem;
-    }
+.belief-grid {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
 
-    .belief-grid-4 {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
+.belief-grid-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
 
-    .belief-grid-5 {
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-    }
+.belief-grid-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
 
-    .belief-card {
-      border-radius: 22px;
-      padding: 1.4rem 1.2rem;
-      height: 140px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+.belief-card {
+  border-radius: 22px;
+  padding: 1.4rem 1.2rem;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .belief-card p {
-      margin: 0;
-      text-align: center;
-    }
+.belief-card p {
+  margin: 0;
+  text-align: center;
+}
 
-    .belief-card-god {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-    }
+.belief-card-god {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+}
 
-    .belief-card-god p {
-      color: #0f172a;
-      font-size: 1rem;
-      line-height: 1.5;
-      max-width: 16ch;
-      font-weight: 600;
-    }
+.belief-card-god p {
+  color: #0f172a;
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 16ch;
+  font-weight: 600;
+}
 
-   .belief-card-man {
+.belief-card-man {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -232,86 +259,80 @@
   padding: 1.75rem 1.25rem;
   background: #ffffff;
   border: 1px solid #e5e7eb;
-  transition: border-color 0.15s ease;
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-    .belief-card-man:hover {
-      border-color: var(--accent-orange);
-    }
+.belief-card-man:hover {
+  border-color: var(--accent-orange);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
 
-    .belief-card-man p {
+.belief-card-man p {
   margin: 0;
   font-size: 1.1rem;
+  line-height: 1;
   color: #0f172a;
 }
 
-    .belief-card-man strong {
-      font-weight: 600;
-    }
+.belief-card-man strong {
+  font-weight: 600;
+}
 
-    .belief-icon-wrap {
+.belief-icon-wrap {
   width: 72px;
   height: 72px;
   border-radius: 999px;
-  background: transparent; /* 👈 remove grey oval */
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
 }
 
-    .belief-icon {
-      width: 32px;
-      height: 32px;
-      color: var(--accent-orange);
-      flex-shrink: 0;
-    }
-
-    .belief-icon-img {
-  width: 84px;
-  height: 84px;
-  object-fit: contain;
-}
-.belief-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.belief-card-work {
-  justify-content: center;
-  gap: 0;
-  padding-top: 1.2rem;
-  padding-bottom: 1.2rem;
+.belief-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--accent-orange);
+  flex-shrink: 0;
 }
 
-.belief-card-work .belief-icon-wrap {
-  width: 84px;
-  height: 84px;
-  margin: 0 0 0.5rem 0;
-}
-
-.belief-card-work .belief-icon-img {
+.belief-icon-img {
   width: 84px;
   height: 84px;
   object-fit: contain;
   display: block;
 }
 
-.belief-card-work p {
-  margin: 0;
-  line-height: 1;
+.belief-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.belief-card-money {
+
+.belief-card-work,
+.belief-card-money,
+.belief-card-power {
   justify-content: center;
   gap: 0;
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
 }
 
-.belief-card-money .belief-icon-wrap {
+.belief-card-work .belief-icon-wrap,
+.belief-card-money .belief-icon-wrap,
+.belief-card-power .belief-icon-wrap {
   width: 84px;
   height: 84px;
   margin: 0 0 0.5rem 0;
+}
+
+.belief-card-work .belief-icon-img,
+.belief-card-power .belief-icon-img {
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
+  display: block;
 }
 
 .belief-card-money .belief-icon-img {
@@ -319,12 +340,75 @@
   height: 84px;
   object-fit: contain;
   display: block;
-  transform: scale(1.06); /* 👈 fixes visual size mismatch */
+  transform: scale(1.06);
 }
 
-.belief-card-money p {
+.belief-card-work p,
+.belief-card-money p,
+.belief-card-power p {
   margin: 0;
   line-height: 1;
+}
+
+.man-quote {
+  margin: 2.5rem auto 0;
+  max-width: 42ch;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #6b7280;
+  font-style: italic;
+  text-align: center;
+}
+
+.man-quote span {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  font-style: normal;
+  color: #9ca3af;
+}
+
+@media (max-width: 1024px) {
+  .belief-grid-5 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .belief-grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .belief-block-divider {
+    margin-top: 3.5rem;
+    padding-top: 3.5rem;
+  }
+
+  .belief-grid-4,
+  .belief-grid-5 {
+    grid-template-columns: 1fr;
+  }
+
+  .belief-card {
+    height: auto;
+    min-height: 120px;
+  }
+
+  .belief-icon-wrap,
+  .belief-card-work .belief-icon-wrap,
+  .belief-card-money .belief-icon-wrap,
+  .belief-card-power .belief-icon-wrap {
+    width: 72px;
+    height: 72px;
+  }
+
+  .belief-icon-img,
+  .belief-card-work .belief-icon-img,
+  .belief-card-money .belief-icon-img,
+  .belief-card-power .belief-icon-img {
+    width: 72px;
+    height: 72px;
+  }
 }
 
     .callout {
@@ -472,29 +556,33 @@
   </header>
 
   <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <h1>You were created to build something that matters.</h1>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <h1>You were created to build something that matters.</h1>
 
-        <p>
-  Work is more than survival or status.
-  You were created to bring something into the world—
-  through your gifts, your effort, and your stewardship.
-</p>
+      <p>
+        Work is more than survival or status. You were created to bring something
+        into the world—through your gifts, your effort, and your perseverance.
+      </p>
 
-<p>
-  When people are free to build, serve, and exchange value,
-  communities flourish.
-</p>
+      <p class="mission">
+        We exist to encourage and equip you to discover your next step.
+      </p>
+
+      <p class="verse">
+        “It is the glory of God to conceal a matter,<br>
+        But the glory of kings is to search out a matter.”<br>
+        <span>— Proverbs 25:2 (NASB)</span>
+      </p>
 
         <div class="cta">
-          <a href="#about" class="button">Learn What We Stand For</a>
+          <a href="#about" class="button">What We Believe</a>
         </div>
       </div>
 
       <div class="hero-media">
   <div class="hero-image">
-    <img src="bitcoin-network-earth.png" alt="Bitcoin unlocking human potential across the world" />
+    <img src="hero-image.png" alt="Open notebook in a quiet workspace" />
   </div>
 </div>
   </section>
@@ -524,24 +612,25 @@
       </div>
 
       <div class="belief-block belief-block-divider">
-        <h2>The realm of Man should be decentralized.</h2>
+        <h2>The realm of Man must be decentralized.</h2>
 
-       <div class="belief-grid belief-grid-5 belief-grid-man">
+<div class="belief-grid belief-grid-5 belief-grid-man">
+
   <div class="belief-card belief-card-man belief-card-work">
-  <div class="belief-icon-wrap">
-    <img src="work-icon.png" class="belief-icon-img" alt="Work icon" />
+    <div class="belief-icon-wrap">
+      <img src="work-icon.png" class="belief-icon-img" alt="Work icon" />
+    </div>
+    <p><strong>Work</strong></p>
   </div>
-  <p><strong>Work</strong></p>
-</div>
 
   <div class="belief-card belief-card-man belief-card-money">
-  <div class="belief-icon-wrap">
-    <img src="money-icon.png" class="belief-icon-img" alt="Money icon" />
+    <div class="belief-icon-wrap">
+      <img src="money-icon.png" class="belief-icon-img" alt="Money icon" />
+    </div>
+    <p><strong>Money</strong></p>
   </div>
-  <p><strong>Money</strong></p>
-</div>
 
-  <div class="belief-card belief-card-man">
+  <div class="belief-card belief-card-man belief-card-power">
     <div class="belief-icon-wrap">
       <svg class="belief-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
         <path d="M12 4v16" />
@@ -574,7 +663,13 @@
     </div>
     <p><strong>Education</strong></p>
   </div>
+
 </div>
+
+<p class="man-quote">
+  “Power tends to corrupt, and absolute power corrupts absolutely.”
+  <span>— Lord Acton</span>
+</p>
   </section>
 
   <section class="callout">
